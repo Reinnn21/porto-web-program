@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Reinhart Lesmana</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script-simple.js" defer></script>
+</head>
+<body>
+    <p class="page-title">Portofolio Singkat</p>
+    <img class="profile-photo" src="thumb-1920-1307432.png" width="400" height="350" alt="Foto Profil">
+
+    <!-- Header / Bagian Identitas -->
+    <header>
+        <h1>Reinhart Lesmana</h1>
+        <p><em>Web Developer</em></p>
+        <hr>
+    </header>
+
+    <!-- Bagian Tentang Saya -->
+    <section>
+        <h2>Tentang Saya</h2>
+        <p>Selamat datang di website portofolio saya. Saya adalah seorang profesional di bidang pengembangan teknologi informasi dan pengajaran sistem komputer dengan pengalaman dalam perancangan aplikasi web.</p>
+    </section>
+
+    <!-- Tabel Biodata -->
+    <table class="biodata-table" border="1">
+        <tr>
+            <td>Nama</td>
+            <td>Reinhart Lesmana</td>
+        </tr>
+        <tr>
+            <td>Tempat/Tanggal lahir</td>
+            <td>Jakarta, 21 Desember 2006</td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td>Iwatodai Dorm</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>doorkun@gmail.com</td>
+        </tr>
+    </table>
+
+    <!-- Bagian Riwayat Pendidikan (Menggunakan Tabel) -->
+    <section>
+        <h2>Riwayat Pendidikan</h2>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Tahun</th>
+                    <th>Lokasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025 - Sekarang</td>
+                    <td>Kalbis University</td>
+                </tr>
+                <tr>
+                    <td>2022 - 2025</td>
+                    <td>Gekkoukan High School</td>
+                </tr>
+                <tr>
+                    <td>2019 - 2022</td>
+                    <td>Okayama Middle School</td>
+                </tr>
+                <tr>
+                    <td>2013 - 2019</td>
+                    <td>Gakushuin Elementary School</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>Hard skill dan Soft skill</h2>
+    <ol>
+        <li>Dapat memahami dasar pembuatan web</li>
+        <li>Bisa membuat Personal web yang interaktif</li>
+        <li>Bisa menawarkan atau membantu orang lain dalam pembuatan web</li>
+    </ol>
+
+    <!-- Bagian Kontak (Menggunakan Formulir) -->
+    <section>
+        <h2>Hubungi Saya</h2>
+        <p>Silakan isi formulir di bawah ini untuk mengirimkan pesan atau kerja sama proyek:</p>
+        <form action="kirim-pesan.php" method="POST">
+            <label for="nama_kontak">Nama Anda:</label><br>
+            <input type="text" id="nama_kontak" name="nama_kontak" required><br><br>
+
+            <label for="email_kontak">Email Anda:</label><br>
+            <input type="email" id="email_kontak" name="email_kontak" required><br><br>
+
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="40" required></textarea><br><br>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>© 2026 Reinhart Lesmana. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>

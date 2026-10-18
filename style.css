@@ -1,0 +1,234 @@
+/* ===== Palet Warna (ubah di sini untuk mengganti seluruh warna halaman) ===== */
+:root {
+    --bg-1: #0f172a;        /* latar: biru malam */
+    --bg-2: #1e1b4b;        /* latar: indigo gelap */
+    --bg-3: #4c1d95;        /* latar: ungu */
+    --indigo: #312e81;      /* judul tabel, elemen utama */
+    --accent: #f59e0b;      /* aksen amber: garis judul, tombol */
+    --accent-light: #fcd34d;
+    --card: #f8fafc;        /* warna kartu */
+    --text: #1e293b;        /* teks di dalam kartu */
+    --text-soft: #c7d2fe;   /* teks lembut di atas latar gelap */
+}
+
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Judul kecil di atas halaman ("Portofolio Singkat") */
+.page-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+    color: #fff;
+}
+
+/* ===== Gambar Profil ===== */
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 4px;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    color: var(--accent-light);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 16px 0;
+}
+
+/* ===== Judul Section ===== */
+/* Judul di dalam kartu: teks indigo dengan garis aksen amber */
+h2 {
+    color: var(--bg-2);
+    background: none;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 4px;
+    margin-top: 0;
+}
+
+/* Judul yang berdiri langsung di atas latar gelap ("Hard skill dan Soft skill") */
+body > h2 {
+    color: #ffffff;
+}
+
+section {
+    background-color: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+table, th, td {
+    border: 1px solid #c7d2fe;
+}
+
+th, td {
+    color: var(--text);
+    background-color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--indigo);
+    color: #fff;
+}
+
+/* Baris selang-seling di tabel pendidikan */
+section tbody tr:nth-child(even) td {
+    background-color: #eef2ff;
+}
+
+/* Tabel Biodata: latar gelap, label berwarna amber */
+.biodata-table {
+    margin-bottom: 24px; /* jarak ke bagian Riwayat Pendidikan (ubah angkanya sesuai selera) */
+}
+
+.biodata-table td {
+    color: #ffffff;
+    background-color: var(--bg-2);
+    border-color: #3f3c8f;
+}
+
+.biodata-table td:first-child {
+    font-weight: bold;
+    color: var(--accent-light);
+    background-color: var(--indigo);
+    width: 35%;
+}
+
+.biodata-table tr:nth-child(even) td {
+    background-color: #26235a;
+}
+
+.biodata-table tr:nth-child(even) td:first-child {
+    background-color: #2b2988;
+}
+
+/* ===== List ===== */
+ol {
+    padding-left: 24px;
+}
+
+ol li {
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+/* Nomor list berwarna amber */
+ol li::marker {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* ===== Formulir Kontak ===== */
+form {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--bg-2);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Kolom yang sedang diisi diberi warna indigo agar jelas */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+button[type="submit"] {
+    background-color: var(--accent);
+    color: var(--bg-2);
+    font-weight: bold;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-light);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: var(--text-soft);
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
